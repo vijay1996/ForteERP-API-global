@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import collections from './collections.js';
 
 dotenv.config();
-mongoose.connect(process.env.DB_URL as string).then(data => {
+mongoose.connect(process.env.GLOBAL_DB_URL as string).then(data => {
     console.log("Connected to the database successfully!");
 }).catch(err => {
     console.log(err);
