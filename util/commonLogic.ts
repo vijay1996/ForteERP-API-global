@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export function removeDuplicatesDocuments (array: Array<any>, property: string|null) {
     const uniqueArray:Array<any> = [];
     array.forEach((element: any) => {
