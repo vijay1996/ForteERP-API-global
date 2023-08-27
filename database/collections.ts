@@ -10,8 +10,16 @@ const currencySchema = new mongoose.Schema({
     name_plural: {type: String, unique: false, required: true}
 });
 
+const generalData = new mongoose.Schema({
+    record: {type: String, unique: true, required: true},
+    category: {type: String, unique: true, required: true},
+    code: {type: String, unique: true, required: false}
+})
+
 export const Currency = mongoose.model('currency', currencySchema);
+export const GeneralData = mongoose.model('generalData', generalData);
 
 export default {
-    "currency": Currency
+    "currency": Currency,
+    "generalData": GeneralData
 }
